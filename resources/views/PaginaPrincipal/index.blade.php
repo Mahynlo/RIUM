@@ -2,6 +2,7 @@
 
 @section('content_principal')
 
+
 <section class="py-5 header mt-1">
     <div class="container py-5 text-white">
         <header class="py-5">
@@ -55,6 +56,8 @@ Auditorio del Centro de las Artes</h5>
 </div>
 </div>
 
+
+<!-- Noticias -->
   <h1 class="mt-5" style="color:black; background-color: #e3f2fd;">Noticias.......</h1>
 
 

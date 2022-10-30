@@ -40,3 +40,7 @@ Route::get('/contacto', function(){
 Route::get('/ubicacion', function(){
     return view('ubicacion.ubicacion');
 });
+
+Route::get('/registro/formulario', function(){
+    return view('registro.formulario.formulario');
+});

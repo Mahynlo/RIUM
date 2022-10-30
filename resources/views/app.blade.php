@@ -46,12 +46,43 @@
         .section-1 {
           background: #f5f5f5;
         }
+
     </style>
+
+<style>
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 16px;
+  overflow: hidden;
+  background-color: orange;
+}
+
+.linkMenu {
+  float: left;
+}
+
+.linkMenu a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  line-height: 26px;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.linkMenu a:hover {
+  background-color: #004990;
+}
+</style>
     
     <title>RIUM</title>
 </head>
 <body>
 
+<!-- Imagen del evento -->
 <div id="carouselExampleSlidesOnly" class="carousel slide mt-4" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -60,7 +91,8 @@
   </div>
 </div>
 
-<nav class="navbar navbar-expand-lg  p-3 mt-1 sticky-top" style="background-color:orange;">
+<!-- Barra de navegacion -->
+<nav class="menu navbar navbar-expand-lg  p-2 mt-1 sticky-top">
   <div class="container-fluid" >
     <a  class="navbar-brand link-light" href="/">RIUM</a>
     <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,30 +100,31 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="linkMenu nav-item">
           <a class="nav-link active link-light" aria-current="page" href="/">Inicio</a>
         </li>
-        <li class="nav-item">
+        <li class="linkMenu nav-item">
           <a class="nav-link link-light" href="/programa">Programa</a>
         </li>
-        <li class="nav-item">
+        <li class="linkMenu nav-item">
           <a class="nav-link link-light" href="/poster">Posters</a>
         </li>
-        <li class="nav-item">
+        <li class="linkMenu nav-item">
           <a class="nav-link link-light" href="/registro">Registro</a>
         </li>
-        <li class="nav-item">
+        <li class="linkMenu nav-item">
           <a class="nav-link link-light" href="/ubicacion">Ubicacion</a>
         </li>
-        <li class="nav-item">
+        <li class="linkMenu nav-item">
           <a class="nav-link link-light" href="/contacto">Contacto</a>
+        </li>
+        <li class="linkMenu nav-item">
+          <a class="nav-link link-light" href="#edicion">Ediciones anteriores</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
 
         @yield('content_principal')
 
@@ -104,7 +137,8 @@
         @yield('content_contacto')
 
         @yield('content_ubicacion')
-        
+
+        @yield('formulario_principal')        
 
         <!-- Remove the container if you want to extend the Footer to full width. -->
   <div class=" mt-4">
@@ -112,8 +146,8 @@
     <footer class="bg-light text-center text-white">
     <!-- Copyright -->
       <div class="text-center p-3" style="background-color: orange;">
-        © 2020 
-        <a class="text-white" href="#">Comité Organizador RUIM 2022</a><br>
+        © 2023 
+        <a class="text-white" href="#">Comité Organizador RUIM </a><br>
         <a class="text-white" href="https://www.unison.mx">Universidad de Sonora | </a>
         <a class="text-white" href="https://dcen.unison.mx">División de Ciencias Exactas y Naturales | </a>
         <a class="text-white" href="https://difus.unison.mx">Departamento de Investigación en Física</a>
