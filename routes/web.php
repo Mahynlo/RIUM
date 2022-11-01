@@ -17,30 +17,18 @@ Route::get('/', function () {
     return view('app');
 });*/
 
-Route::get('/', function(){
-    return view('PaginaPrincipal.index');
-});
 
-Route::get('/registro', function(){
-    return view('registro.registro');
-});
+//Rutas de pagina principal 
+Route::get('/', 'App\Http\Controllers\PaginaPrincipal@inicio');
 
-Route::get('/poster', function(){
-    return view('poster.poster');
-});
+Route::get('/registro', 'App\Http\Controllers\PaginaPrincipal@registro');
 
-Route::get('/programa', function(){
-    return view('programa.programa');
-});
+Route::get('/poster', 'App\Http\Controllers\PaginaPrincipal@poster');
 
-Route::get('/contacto', function(){
-    return view('contacto.contacto');
-});
+Route::get('/programa', 'App\Http\Controllers\PaginaPrincipal@programa');
 
-Route::get('/ubicacion', function(){
-    return view('ubicacion.ubicacion');
-});
+Route::get('/contacto', 'App\Http\Controllers\PaginaPrincipal@contacto');
 
-Route::get('/registro/formulario', function(){
-    return view('registro.formulario.formulario');
-});
+Route::get('/ubicacion', 'App\Http\Controllers\PaginaPrincipal@ubicacion');
+
+Route::get('/registro/formulario', 'App\Http\Controllers\PaginaPrincipal@formulario');
