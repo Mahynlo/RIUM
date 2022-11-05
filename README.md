@@ -7,24 +7,23 @@ _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
 composer version 2.3.5
-php
+XAMPP
+PHP
 ```
 
-### Instalación 🔧
+### Instalación 
 
 _Sigue estos pasos para la instalacion_
 
-_Dí cómo será ese paso_
 
 ```
 git clone https://github.com/Mahynlo/RIUM.git
 ```
+_Una ves hecho esto en la terminal ejecuta los siguientes comandos en la terminal:_
 
 ```
 cp .env.example .env
 ```
-
-_Y repite_
 
 ```
 composer install
@@ -32,6 +31,11 @@ composer install
 
 ```
 php artisan key:generate
+```
+### Ejecucion
+
+```
+php artisan serve
 ```
 
 
