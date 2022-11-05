@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 /*
 Route::get('/', function () {
-    return view('app');
-});*/
-
+    return view('welcome');
+});
+*/
 
 //Rutas de pagina principal 
 Route::get('/', 'App\Http\Controllers\PaginaPrincipal@inicio');
@@ -32,3 +32,13 @@ Route::get('/contacto', 'App\Http\Controllers\PaginaPrincipal@contacto');
 Route::get('/ubicacion', 'App\Http\Controllers\PaginaPrincipal@ubicacion');
 
 Route::get('/registro/formulario', 'App\Http\Controllers\PaginaPrincipal@formulario');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

@@ -20,12 +20,12 @@
                   </ul> 
 
                   <a>El registro para participaciones, tanto en formato de plática como de póster, se deberá enviar por el</a>
-                  <a class="text-black" href="#">formulario de registro.</a><br><br>
+                  <a class="text-black" href="https://docs.google.com/forms/d/1NqmRtjGLgYecDgGk4x7lGMscUjewZ2Rlp8HvtE96VIA/edit">formulario de registro.</a><br><br>
 
                   <a class="text-black">Formato de resumen:</a><br>
                   <a>La extensión es de una o dos cuartillas siguiendo la plantilla de formato WORD 2010 y 
                     posteriores (.docx), la cual está disponible en el siguiente enlace.</a>
-                  <a class="text-black" href="#">CLICK AQUÍ</a><br><br>
+                  <a class="text-black" href="../../../archivos_de_descarga/RUIM2022FORMATO.docx" download>CLICK AQUÍ</a><br><br>
 
                   <a class="text-black">Constancias de participación:</a>
                   <a>Se expedirán constancias de participación a los siguientes participantes:</a>
@@ -38,8 +38,6 @@
                   <a>Para la participación en los cursos y talleres que se llevarán a cabo en esta edición de la RUIM, 
                     es necesario un pre- registro, para el cual se habilitará un enlace próximamente. </a><br><br>
                 </div>
-
-                <p><a class="btn btn-primary btn-lg text-center" href="/registro/formulario" role="button">Formulario de registro</a></p>
               
             </div>
         </div>

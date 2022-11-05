@@ -117,10 +117,13 @@
         </li>
         <li class="linkMenu nav-item">
           <a class="nav-link link-light" href="#edicion">Ediciones anteriores</a>
-          
         </li>
+        
       </ul>
+      
     </div>
+    <p><a class="btn btn-primary btn-lg text-center" href="{{ route('login') }}" role="button">Inicio de secion</a></p>
+  <p><a class="btn btn-primary btn-lg text-center" href="{{ route('register') }}" role="button">Registrar Admin</a></p>
   </div>
 </nav>
 
