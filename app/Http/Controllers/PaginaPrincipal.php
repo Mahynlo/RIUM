@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Post;
 class PaginaPrincipal extends Controller
 {
     public function inicio(){
@@ -19,7 +19,9 @@ class PaginaPrincipal extends Controller
     }
 
     public function programa(){
-        return view('programa.programa');
+        return view('programa.programa',[
+            'posts' => Post::all()
+        ]);
     }
 
     public function contacto(){

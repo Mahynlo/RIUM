@@ -10,6 +10,13 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h3 class="text-muted lead">AUN ESTAMOS TRABAJANDO EN ESTO, PRÓXIMAMENTE MÁS INFORMACIÓN.</h3>
+
+                @foreach($posts as $post)
+                    @if ($post -> id == 5)
+                        <h1 class="text-muted lead">{{ $post -> resumen }}</h1>
+                        
+                    @endif
+                 @endforeach
             </div>
         </div>
     </div>

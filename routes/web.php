@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Inscripciones;
+use App\Http\Livewire\Posts;
+use App\Http\Livewire\UsersTable;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +42,28 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+
+        //Rutas de administrador
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/navegacion/inscripciones',function(){
+        return view('navegacion.inscripciones.inscripciones');
+    })->name('inscripciones');
+
+
+    Route::get('/navegacion/usuarios',UsersTable::class)->name('usuarios');
+
+    
+      //Ruta de inscripciones
+    Route::get('post', Posts::class);
+});
+
+
+
+
+Route::get('/formulario', function () {
+
+    return view('registro.formulario.formulario_artesanal');
 });
