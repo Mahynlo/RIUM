@@ -20,7 +20,8 @@
                   </ul> 
 
                   <a>El registro para participaciones, tanto en formato de plática como de póster, se deberá enviar por el</a>
-                  <a class="text-black" href="/formulario">formulario de registro.</a><br><br>
+                  <a class="text-black" href="/formulario">
+                    formulario de registro.</a><br><br>
 
                   <a class="text-black">Formato de resumen:</a><br>
                   <a>La extensión es de una o dos cuartillas siguiendo la plantilla de formato WORD 2010 y 

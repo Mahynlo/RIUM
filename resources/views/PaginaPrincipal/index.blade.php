@@ -9,14 +9,13 @@
             <h1 class="display-4 text-center">Bienvenid@s</h1>
             <h2 class="font-italic mb-1 text-center" >XXV Reunión Universitaria de Investigación en Materiales 
               (RUIM 2022) Del 9 al 11 de Noviembre Auditorio del Centro de las Artes</h2><br>
-            <h5 class="font-italic text-center">El objetivo de la Reunión Universitaria de Investigación en Materiales (RUIM 2022) es dar a 
-                  conocer a la comunidad universitaria las actividades que se desarrollan en nuestra institución mediante la presentación de trabajos, por parte de estud
-                  iantes y profesores de la Universidad de Sonora, que tengan como temática la investigación en materiales.</h5>
-            <h5 class="text-center">Por lo anterior, se convoca a los estudiantes de Posgrado y estudiantes avanzados de Licenciatura, así como a los 
-                profesores e investigadores de las Divisiones de Ciencias Exactas y Naturales (DCEN), Ciencias Biológicas y de la 
-                Salud (DCBS), e Ingeniería (DI) de la Universidad de Sonora, a presentar trabajos en la XXV Reunión Universitaria de 
-                Investigación en Materiales (RUIM 2022).</h5>
-            <h5 class="text-center">LAS ACTIVIDADES CONTEMPLADAS PARA ESTE EVENTO SERÁN TOTALMENTE GRATUITAS Y DE LIBRE ACCESO.</h5><br>
+            <h5 class="font-italic text-center">
+              @foreach ($posts as $post)
+              @if($post->titulo == "Inicio")
+					      {{$post->resumen}}
+				      @endif
+              @endforeach
+            </h5><br>
                 <p><a class="btn btn-warning btn-lg text-center" href="/registro" role="button">Registro a RIUM</a></p>
             </p>
         </header>

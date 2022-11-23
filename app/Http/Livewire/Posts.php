@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\Post;
+use App\Models\Post; //Importamos el modelo Post
 
 class Posts extends Component
 {
@@ -13,7 +13,7 @@ class Posts extends Component
     public function render()
     {
         $this->posts = Post::all();
-        return view('livewire.posts');
+        return view('livewire.posts');//Aqui se llama a la vista posts.blade.php
     }
 
     public function create(){

@@ -122,7 +122,7 @@
       </ul>
       
     </div>
-    <p><a class="btn btn-primary btn-lg text-center" href="{{ route('login') }}" role="button">Inicio de secion</a></p>
+    <p><a class="btn btn-primary btn-lg text-center" href="{{ route('login') }}" role="button">Inicio de sesión</a></p>
   <p><a class="btn btn-primary btn-lg text-center" href="{{ route('register') }}" role="button">Registrar Admin</a></p>
   </div>
 </nav>

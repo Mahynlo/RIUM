@@ -14,14 +14,15 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <h1>WELCOME</h1>
-                                <p class="text-muted lead">Sea usted vienvenido al Administrador</p>
+                                <p class="text-muted lead">Sea usted bienvenido al Administrador</p>
                                 
                             </div>
                         </div>
                     </div>
 
-                        <!-- This is an example component -->
+	        <!-- This is an example component -->
     <div class='flex sm:flex-row flex-col space-y-2 sm:space-x-2 flex-row w-full items-center justify-center mt-10'>
+	<a href="/dashboard/inscripciones">
 	<div class='flex flex-wrap flex-row sm:flex-col justify-center items-center w-full sm:w-1/4 p-5 bg-white rounded-md shadow-xl border-l-4 border-blue-300'>
 		<div class="flex justify-between w-full">
 			<div>
@@ -34,20 +35,30 @@
 				</div>
 			</div>
 			<div>
-				<div style="padding-top: 0.1em; padding-bottom: 0.1rem"
-					class="flex items-center text-xs px-3 bg-blue-200 text-blue-800 rounded-full">100%</div>
+				<div style="padding-top: 0.1em; padding-bottom: 0.1rem" class="flex items-center text-xs px-3 bg-blue-200 text-blue-800 rounded-full">Nuevos</div>
 			</div>
 		</div>
 		<div>
 			<div class="font-bold text-5xl text-center">
-				4
+
+				@php($count=0)
+
+				@foreach($formregistros as $formregistro)
+					@php($count++)
+				@endforeach
+
+				{{$count}}
+
 			</div>
-			<div class="font-bold text-sm">
+			<div class="font-bold text-sm text-center">
 				Total de Inscripciones
 			</div>
 		</div>
+		</a>
 	</div>
+
 	<div class='flex flex-wrap flex-row sm:flex-col justify-center items-center w-full sm:w-1/4 p-5 bg-white rounded-md shadow-xl border-l-4 border-purple-300'>
+	<a href="/dashboard/inscripciones">
 		<div class="flex justify-between w-full">
 			<div>
 				<div class="p-2">
@@ -60,20 +71,29 @@
 			</div>
 			<div>
 				<div style="padding-top: 0.1em; padding-bottom: 0.1rem"
-					class="flex items-center text-xs px-3 bg-purple-200 text-purple-800 rounded-full">25%</div>
+					class="flex items-center text-xs px-3 bg-purple-200 text-purple-800 rounded-full">Nuevos</div>
 			</div>
 		</div>
 		<div >
 			<div class="font-bold text-5xl text-center">
-				1
+			@php($count=0)
+
+			@foreach($formregistros as $formregistro)
+				@if($formregistro->tipo == "Ponencia")
+					@php($count++)
+				@endif
+			@endforeach
+
+			{{$count}}
 			</div>
-			<div class="font-bold text-sm">
+			<div class="font-bold text-sm text-center">
 				Ponencia
 			</div>
 		</div>
 	</div>
-	<div
-		class='flex flex-wrap flex-row sm:flex-col justify-center items-center w-full sm:w-1/4 p-5 bg-white rounded-md shadow-xl border-l-4 border-red-300'>
+	</a>
+	<div class='flex flex-wrap flex-row sm:flex-col justify-center items-center w-full sm:w-1/4 p-5 bg-white rounded-md shadow-xl border-l-4 border-red-300'>
+	<a href="/dashboard/inscripciones">
 		<div class="flex justify-between w-full">
 			<div>
 				<div class="p-2">
@@ -86,20 +106,29 @@
 			</div>
 			<div>
 				<div style="padding-top: 0.1em; padding-bottom: 0.1rem"
-					class="flex items-center text-xs px-3 bg-red-200 text-red-800 rounded-full">50%</div>
+					class="flex items-center text-xs px-3 bg-red-200 text-red-800 rounded-full">Nuevos</div>
 			</div>
 		</div>
 		<div>
 			<div class="font-bold text-5xl text-center">
-				2
+			@php($count=0)
+
+			@foreach($formregistros as $formregistro)
+				@if($formregistro->tipo == "Cartel")
+					@php($count++)
+				@endif
+			@endforeach
+
+			{{$count}}
 			</div>
-			<div class="font-bold text-sm">
+			<div class="font-bold text-sm text-center">
 				Cartel
 			</div>
 		</div>
 	</div>
-	<div
-		class='flex flex-wrap flex-row sm:flex-col justify-center items-center w-full sm:w-1/4 p-5 bg-white rounded-md shadow-xl border-l-4 border-green-300'>
+	</a>
+	<div class='flex flex-wrap flex-row sm:flex-col justify-center items-center w-full sm:w-1/4 p-5 bg-white rounded-md shadow-xl border-l-4 border-green-300'>
+		<a href="/dashboard/inscripciones">
 		<div class="flex justify-between w-full">
 			<div>
 				<div class="p-2">
@@ -112,19 +141,21 @@
 			</div>
 			<div>
 				<div style="padding-top: 0.1em; padding-bottom: 0.1rem"
-					class="flex items-center text-xs px-3 bg-green-200 text-green-800 rounded-full">25%</div>
+					class="flex items-center text-xs px-3 bg-green-200 text-green-800 rounded-full">Nuevos</div>
 			</div>
 		</div>
 		<div>
 			<div class="font-bold text-5xl text-center">
 				1
 			</div>
-			<div class="font-bold text-sm">
+			<div class="font-bold text-sm text-center">
 				Asistentes
 			</div>
 		</div>
 	</div>
+</a>
 </div>
+
                 </section>    
             </div>
         </div>

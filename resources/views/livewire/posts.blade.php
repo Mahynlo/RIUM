@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Manage Posts
+        Modificacion de la Pagina principal
     </h2>
 </x-slot>
 <div class="py-12">
@@ -15,11 +15,13 @@
                   </div>
                 </div>
             @endif
+            
             <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Create New Post</button>
+            
             @if($isOpen)
                 @include('livewire.create')
             @endif
-            <table class="table-fixed w-full">
+            <table class="table-fixed w-full mt-6 text-center">
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">No.</th>
@@ -36,12 +38,13 @@
                         <td class="border px-4 py-2">{{ $post->resumen }}</td>
                         <td class="border px-4 py-2">
                         <button wire:click="edit({{ $post->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
-                            <button wire:click="delete({{ $post->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+                        <button wire:click="delete({{ $post->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+            
         </div>
     </div>
 </div>

@@ -7,7 +7,9 @@ use App\Models\Post;
 class PaginaPrincipal extends Controller
 {
     public function inicio(){
-        return view('PaginaPrincipal.index');
+        return view('PaginaPrincipal.index', [
+            'posts' => Post::all()
+        ]);
     }
 
     public function registro(){

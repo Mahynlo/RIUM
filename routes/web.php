@@ -5,6 +5,8 @@ use App\Http\Livewire\Inscripciones;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\UsersTable;
 use App\Models\Post;
+use App\Http\Livewire\Formulario;
+use App\Models\FormRegistro;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +37,8 @@ Route::get('/contacto', 'App\Http\Controllers\PaginaPrincipal@contacto');
 
 Route::get('/ubicacion', 'App\Http\Controllers\PaginaPrincipal@ubicacion');
 
-Route::get('/registro/formulario', 'App\Http\Controllers\PaginaPrincipal@formulario');
+//Route::get('/registro/formulario', 'App\Http\Controllers\PaginaPrincipal@formulario');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -45,25 +48,26 @@ Route::middleware([
 
         //Rutas de administrador
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard',[
+            'formregistros' => FormRegistro::all(),
+        ]);
     })->name('dashboard');
 
-    Route::get('/navegacion/inscripciones',function(){
-        return view('navegacion.inscripciones.inscripciones');
-    })->name('inscripciones');
+    Route::get('/dashboard/modificar',Posts::class)->name('modificar');
 
 
-    Route::get('/navegacion/usuarios',UsersTable::class)->name('usuarios');
+    Route::get('/dashboard/inscripciones',Formulario::class)->name('inscripciones');
 
+    Route::get('/dashboard/usuarios',UsersTable::class)->name('usuarios');
     
-      //Ruta de inscripciones
-    Route::get('post', Posts::class);
 });
 
 
-
-
-Route::get('/formulario', function () {
+/*Route::get('/formulario', function () {
 
     return view('registro.formulario.formulario_artesanal');
-});
+});*/
+
+//Route::post('informacionEnviada', formulario::class)-> name('informacionEnviada'); 
+
+
